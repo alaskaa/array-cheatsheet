@@ -117,8 +117,20 @@ Shallow copies part of an array to another location in the same array and return
 
 
 ## reduce and reduceRight()
+### array.reduce()
 
-TO DO 
+Operates with a reducer function on an array. Can be used in lots of different use cases - can replace a map and filter and make it more concise. Takes up to four arguments. Needs an accumulator and currentValue argument. If accumulator isn't specified at start, we start with null. Current value is always the next item in the array. Accumulator is always the result of the previous iteration. Last accumulator will be returned.
+```
+const array1 = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer));
+// expected output: 10
+```
+### array.reduceRight()
+Works similarly to array.reduce() but works the other way round. .We work from the last item in the array to the front of the array (right to left) instead of (left to right).
+
 
 
 ## Check whether Array is really array
